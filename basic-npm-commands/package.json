@@ -1,0 +1,21 @@
+{
+  "name": "basic-npm-commands",
+  "version": "1.0.0",
+  "description": "Basic npm commands tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "basic",
+    "npm",
+    "commands",
+    "tutorial"
+  ],
+  "author": "Olgun DUTKAN <odutkan@havelsan.com.tr>",
+  "license": "MIT"
+}

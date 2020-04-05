@@ -6,11 +6,14 @@ import Clock from './Clock';
 import Toggle from './Toggle';
 import UsersList from './UsersList';
 import SampleButton from "./SampleButton";
+import InlineStyleButton from "./InlineStyleButton";
+import CSSClassButton from "./CSSClassButton";
+import RenderElements from "./RenderElements";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <SampleButton />
+    <RenderElements />
   </React.StrictMode>,
   document.getElementById('root')
 );

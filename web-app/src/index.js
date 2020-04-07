@@ -9,11 +9,12 @@ import SampleButton from "./SampleButton";
 import InlineStyleButton from "./InlineStyleButton";
 import CSSClassButton from "./CSSClassButton";
 import RenderElements from "./RenderElements";
+import ArrowFuncComponent from "./ArrowFuncComponent";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <RenderElements />
+    <ArrowFuncComponent name={"Olgun"} />
   </React.StrictMode>,
   document.getElementById('root')
 );

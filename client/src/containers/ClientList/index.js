@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
 import { fetchClientsRequest } from "../../actions/clients";
 import { connect } from "react-redux";
 import ClientsTable from "../../components/ClientsTable";
-import CanvasBoard from "../../components/CanvasBoard";
 
 class ClientList extends React.Component {
   /**

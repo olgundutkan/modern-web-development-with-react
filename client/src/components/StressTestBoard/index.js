@@ -113,6 +113,7 @@ const StressTestBoard = ({ clients, dragStart, dragEnd, onMove }) => {
                 />
               );
             }
+            return false;
           })}
         </Container>
       </Stage>

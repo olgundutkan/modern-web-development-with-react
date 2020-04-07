@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link as RouterLink } from "react-router-dom";
 import Link from "@material-ui/core/Link";
+import { Route } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 
@@ -25,12 +26,32 @@ const BreadCrumbs = () => {
     };
   }, []);
   return (
-    <Breadcrumbs aria-label="breadcrumb" classes={{ root: classes.root }}>
-      <Link color="inherit" component={RouterLink} to={"/dashboard"}>
-        Dashboard
-      </Link>
-      <Typography color="textPrimary">Breadcrumb</Typography>
-    </Breadcrumbs>
+    <Route>
+      {({ location }) => {
+        const pathnames = location.pathname.split("/").filter(x => x);
+        return (
+          <Breadcrumbs aria-label="breadcrumb" classes={{ root: classes.root }}>
+            <Link color="inherit" component={RouterLink} to={"/"}>
+              Dashboard
+            </Link>
+            {pathnames.map((value, index) => {
+              const last = index === pathnames.length - 1;
+              const to = `/${pathnames.slice(0, index + 1).join("/")}`;
+
+              return last ? (
+                <Typography color="textPrimary" key={to}>
+                  {value.replace(/^\w/, c => c.toUpperCase())}
+                </Typography>
+              ) : (
+                <RouterLink color="inherit" to={to} key={to}>
+                  {value.replace(/^\w/, c => c.toUpperCase())}
+                </RouterLink>
+              );
+            })}
+          </Breadcrumbs>
+        );
+      }}
+    </Route>
   );
 };
 

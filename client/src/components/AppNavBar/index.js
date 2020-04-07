@@ -129,7 +129,7 @@ const AppNavBar = ({
           <ListItem
             button
             component={Link}
-            to={"/dashboard"}
+            to={"/"}
             onClick={e => onChangeDrawerStatus(false)}
           >
             <ListItemIcon>

@@ -13,7 +13,6 @@ import {
   dragStartClientPositionAction,
   updateClientPositionRequest
 } from "../../actions/clients/client";
-import CanvasBoard from "../../components/CanvasBoard";
 import { moveClientPositionAction } from "../../actions/clients/client";
 import StressTestBoard from "../../components/StressTestBoard";
 
